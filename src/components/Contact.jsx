@@ -36,13 +36,13 @@ export default function Contact() {
     {
       icon: MapPin,
       title: "Our Location",
-      content: "Shop No. 1, 2 & 3, Plot No. 4, Sector - 30A, Vashi, Navi Mumbai - 400703, Maharashtra"
+      content: "Bhakti Residency, Plot No 6, Sector 11, Sanpada, Navi Mumbai, Maharashtra 400705"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91 98200 98200", // Using placeholder phone as none was provided
-      link: "tel:+919820098200"
+      content: "098199 53909",
+      link: "tel:+919819953909"
     },
     {
       icon: Mail,
@@ -174,10 +174,10 @@ export default function Contact() {
 
         </div>
 
-        {/* Map Embed - Sanpada / Vashi area generic embed */}
-        <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-md reveal border border-gray-200">
+        {/* Map Embed - Sai Kripa Distributors specific embed */}
+        <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-md reveal border border-gray-200 bg-gray-100 relative">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15082.946369062329!2d73.00396001739502!3d19.07530660000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13aa11b857d%3A0xe6bf4bade2abfb5c!2sVashi%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1714578500201!5m2!1sen!2sin" 
+            src="https://maps.google.com/maps?q=Sai%20Kripa%20Distributors%2C%20Bhakti%20Residency%2C%20Sanpada&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
@@ -186,6 +186,14 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Sai Kripa Location Map"
           ></iframe>
+          <a 
+            href="https://google.com/maps/place/Sai+Kripa+Distributors/data=!4m2!3m1!1s0x0:0xb75d95b3f0e6ac62?sa=X&ved=1t:2428&ictx=111"
+            target="_blank"
+            rel="noreferrer"
+            className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded shadow text-sm font-bold text-gray-800 hover:text-primary transition-colors border border-gray-200"
+          >
+            View on Google Maps
+          </a>
         </div>
 
       </div>
