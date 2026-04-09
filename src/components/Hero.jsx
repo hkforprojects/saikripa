@@ -1,4 +1,5 @@
 import { ArrowRight, ShieldCheck, Truck, Clock, Package } from 'lucide-react';
+import heroBg from '../assets/hero.png';
 
 export default function Hero() {
   const stats = [
@@ -13,33 +14,34 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1586015555751-63bb77f4322a?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(26, 95, 122, 0.72)' }}></div>
+        {/* Soft white gradient overlay to make text readable on the left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 sm:from-white/80 via-white/50 to-transparent"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-3xl text-center md:text-left reveal">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-gold/20 border border-gold/30 backdrop-blur-sm">
-            <span className="text-gold font-medium text-sm sm:text-base tracking-wide uppercase">
+          <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-[#fef3c7] border border-[#fde68a] backdrop-blur-sm shadow-sm">
+            <span className="text-[#b45309] font-medium text-sm sm:text-base tracking-wide uppercase">
               Trusted Since 2009 · Navi Mumbai
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Your Trusted Partner in <span className="text-gold">Healthcare</span> Distribution
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-dark leading-tight mb-6">
+            Your Trusted Partner in <span className="text-[#f59e0b]">Healthcare</span> Distribution
           </h1>
           
-          <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl font-sans">
+          <p className="text-lg sm:text-xl text-gray-700 mb-10 max-w-2xl font-sans">
             Supplying premium wholesale pharmaceuticals and surgical equipment with unmatched reliability and care.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#products" className="btn-primary bg-white text-primary hover:bg-gray-100 hover:text-primary group">
+            <a href="#products" className="btn-primary flex items-center justify-center group">
               Explore Products
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </a>
-            <a href="#contact" className="btn-outline border-white text-white hover:bg-white hover:text-primary">
+            <a href="#contact" className="btn-outline border-primary text-primary hover:bg-gray-50 flex items-center justify-center">
               Contact Us
             </a>
           </div>
