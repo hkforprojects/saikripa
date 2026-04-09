@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a5f7a;
+  --color-primary-light: #2d8bba;
+  --color-accent: #e8f4f8;
+  --color-gold: #c5973a;
+  --color-dark: #1a1a2e;
+  --color-text-body: #4a4a68;
+  --color-muted: #8a8aaa;
+  --color-bg-light: #f8fafc;
+
+  --font-sans: "DM Sans", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--color-dark);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Additional component styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-light transition-colors duration-300;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-current text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-primary transition-colors duration-300;
+}
